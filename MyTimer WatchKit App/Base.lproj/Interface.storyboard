@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="f2R-wF-lbZ">
+                            <items>
+                                <label alignment="center" text="00:00:00" textAlignment="center" id="jwu-ZL-L6g"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="xcb-Y2-Ij4">
+                            <items>
+                                <button width="0.5" alignment="left" title="Stop" id="lXf-Z3-HNC">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="stopButtonPushed" destination="AgC-eL-Hgc" id="KkI-cH-dME"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Start" id="esY-LQ-FZK">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="startButtonPushed" destination="AgC-eL-Hgc" id="KS0-hq-4dG"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Lap" id="WXv-GB-BPL">
+                                    <color key="titleColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="lapButtonPushed" destination="AgC-eL-Hgc" id="HEU-0K-Abe"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Reset" id="S86-bo-70Q">
+                                    <color key="titleColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="resetButtonPushed" destination="AgC-eL-Hgc" id="fUZ-Pj-0cb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <table alignment="left" id="UVS-F9-nt0">
+                            <items>
+                                <tableRow identifier="LapTableCell" id="tFo-He-fh4" customClass="LapTableCell">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="074-Gc-bYc">
+                                        <items>
+                                            <label width="0.20000000000000001" alignment="left" text="0" textAlignment="right" id="585-8J-1il">
+                                                <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                            <label width="0.80000000000000004" alignment="left" text="00:00:00" textAlignment="right" id="ClN-lX-2Af">
+                                                <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="numberLabel" destination="585-8J-1il" id="Old-ez-93L"/>
+                                        <outlet property="timeLabel" destination="ClN-lX-2Af" id="wYy-R8-7Nf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="lapButton" destination="WXv-GB-BPL" id="vm5-YA-wlA"/>
+                        <outlet property="lapTable" destination="UVS-F9-nt0" id="gk3-rx-I4T"/>
+                        <outlet property="resetButton" destination="S86-bo-70Q" id="swC-pi-9np"/>
+                        <outlet property="startButton" destination="esY-LQ-FZK" id="sf5-AN-xyP"/>
+                        <outlet property="stopButton" destination="lXf-Z3-HNC" id="79E-Ck-PWc"/>
+                        <outlet property="timerLabel" destination="jwu-ZL-L6g" id="Xcp-o5-8iu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-152" y="-99"/>
+        </scene>
+    </scenes>
+</document>
